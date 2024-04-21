@@ -21,30 +21,18 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="forums.html"><img src="" alt="logo"></a>
+                        <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo"/></a>
                     </div>
-                    <div class="navbar-collapse collapse">
+                    <div class="navbar-collapse collapse ">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="forums.html">Forum</a></li>
-                            <li class="active"><a href="about.html">About</a></li>
+                            <li class="active"><a href="/">Home</a></li> 
+                            <li><a href="about.html">About Us</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
-            <!--SearchBox Section-->
-            <!--<div class="search-box">
-                <div>
-                    <select name="" id="">
-                        <option value="Everything">Everything</option>
-                        <option value="Titles">Titles</option>
-                        <option value="Descriptions">Descriptions</option>
-                    </select>
-                    <input type="text" name="q" placeholder="search ...">
-                    <button><i class="fa fa-search"></i></button>
-                </div>
-            </div>-->
         </header>
     
         <section id="featured">
@@ -52,21 +40,21 @@
             <div id="main-slider" class="flexslider">
                 <ul class="slides">
                     <li>
-                        <img src="img/slides/1.jpg">
+                        <img src="{{ url_for('static', filename='img/slides/1.jpg') }}">
                         <div class="flex-caption">
                             <h3>Your health matters</h3>
                             <p>Take your health into your own hands!</p>
                         </div>
                     </li>
                     <li>
-                        <img src="img/slides/2.jpg">
+                        <img src="{{ url_for('static', filename='img/slides/2.jpg') }}">
                         <div class="flex-caption">
                             <h3>Get information you can trust</h3>
                             <p>Verified by experts</p>
                         </div>
                     </li>
                     <li>
-                        <img src="img/slides/3.jpg">
+                        <img src="{{ url_for('static', filename='img/slides/3.jpg') }}">
                         <div class="flex-caption">
                             <h3>Healty now!</h3>
                             <p>Take your health into your own hands!</p>
@@ -75,210 +63,73 @@
                 </ul>
             </div>
         </section>
+
+        <section id="categories" style="margin-top: 2dvw;">
+            <div class="container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="3">
+                                <div class="search-bar text-right">
+                                    <input type="text" id="search" placeholder="Search">
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="category-item">
+                                    <img src="{{ url_for('static', filename='img/category/category1.jpg') }}" alt="Nutrition & Diet">
+                                    <div class="category-details">
+                                        <h4><a href="category.html">Nutrition & Diet</a></h4>
+                                        <p>Discussions about healthy eating habits, diet plans, meal ideas, and nutrition tips.</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="category-item">
+                                    <img src="{{ url_for('static', filename='img/category/category2.jpg') }}" alt="Mental Health">
+                                    <div class="category-details">
+                                        <h4><a href="category.html">Mental Health</a></h4>
+                                        <p>Discussions on managing stress, anxiety, depression, mindfulness, therapy, and self-care practices.</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="category-item">
+                                    <img src="{{ url_for('static', filename='img/category/category3.jpg') }}" alt="Fitness & Exercise">
+                                    <div class="category-details">
+                                        <h4><a href="category.html">Fitness & Exercise</a></h4>
+                                        <p>Topics related to workouts, exercise routines, gym equipment, sports, and physical activity.</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="category-item">
+                                    <img src="{{ url_for('static', filename='img/category/category4.jpg') }}" alt="Medical Conditions">
+                                    <div class="category-details">
+                                        <h4><a href="category.html">Medical Conditions</a></h4>
+                                        <p>Support and advice for managing specific medical conditions such as diabetes, hypertension, allergies, and chronic pain.</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-right">
+                    <a href="create_post.html" class="btn btn-primary">Create Post</a>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <!--<div class="container">
-        <div class="subforum">
-            <div class="subforum-title">
-                <h1>General Information</h1>
-            </div>
-            <div class="subforum-row">
-                <div class="subforum-icon subforum-column center">
-                    <i class="fa fa-car center"></i>
-                </div>
-                <div class="subforum-description subforum-column">
-                    <h4><a href="#">Description Title</a></h4>
-                    <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
-                </div>
-                <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
-                </div>
-                <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
-                    <br>on <small>12 Dec 2020</small>
-                </div>
-            </div>
-        </div>
-        
-        <div class="subforum">
-            <div class="subforum-title">
-                <h1>General Information</h1>
-            </div>
-            <div class="subforum-row">
-                <div class="subforum-icon subforum-column center">
-                    <i class="fa fa-car center"></i>
-                </div>
-                <div class="subforum-description subforum-column">
-                    <h4><a href="#">Description Title</a></h4>
-                    <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
-                </div>
-                <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
-                </div>
-                <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
-                    <br>on <small>12 Dec 2020</small>
-                </div>
-            </div>
-            <hr class="subforum-devider">
-            <div class="subforum-row">
-                <div class="subforum-icon subforum-column center">
-                    <i class="fa fa-car center"></i>
-                </div>
-                <div class="subforum-description subforum-column">
-                    <h4><a href="#">Description Title</a></h4>
-                    <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
-                </div>
-                <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
-                </div>
-                <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
-                    <br>on <small>12 Dec 2020</small>
-                </div>
-            </div>
-            <hr class="subforum-devider">
-            <div class="subforum-row">
-                <div class="subforum-icon subforum-column center">
-                    <i class="fa fa-car center"></i>
-                </div>
-                <div class="subforum-description subforum-column">
-                    <h4><a href="#">Description Title</a></h4>
-                    <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
-                </div>
-                <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
-                </div>
-                <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
-                    <br>on <small>12 Dec 2020</small>
-                </div>
-            </div>
-            <hr class="subforum-devider">
-            <div class="subforum-row">
-                <div class="subforum-icon subforum-column center">
-                    <i class="fa fa-car center"></i>
-                </div>
-                <div class="subforum-description subforum-column">
-                    <h4><a href="#">Description Title</a></h4>
-                    <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
-                </div>
-                <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
-                </div>
-                <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
-                    <br>on <small>12 Dec 2020</small>
-                </div>
-            </div>
-            <hr class="subforum-devider">
-            <div class="subforum-row">
-                <div class="subforum-icon subforum-column center">
-                    <i class="fa fa-car center"></i>
-                </div>
-                <div class="subforum-description subforum-column">
-                    <h4><a href="#">Description Title</a></h4>
-                    <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
-                </div>
-                <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
-                </div>
-                <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
-                    <br>on <small>12 Dec 2020</small>
-                </div>
-            </div>
-        </div>
-
-        <div class="subforum">
-            <div class="subforum-title">
-                <h1>General Information</h1>
-            </div>
-            <div class="subforum-row">
-                <div class="subforum-icon subforum-column center">
-                    <i class="fa fa-car center"></i>
-                </div>
-                <div class="subforum-description subforum-column">
-                    <h4><a href="#">Description Title</a></h4>
-                    <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
-                </div>
-                <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
-                </div>
-                <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
-                    <br>on <small>12 Dec 2020</small>
-                </div>
-            </div>
-            <hr class="subforum-devider">
-            <div class="subforum-row">
-                <div class="subforum-icon subforum-column center">
-                    <i class="fa fa-car center"></i>
-                </div>
-                <div class="subforum-description subforum-column">
-                    <h4><a href="#">Description Title</a></h4>
-                    <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
-                </div>
-                <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
-                </div>
-                <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
-                    <br>on <small>12 Dec 2020</small>
-                </div>
-            </div>
-            <hr class="subforum-devider">
-            <div class="subforum-row">
-                <div class="subforum-icon subforum-column center">
-                    <i class="fa fa-car center"></i>
-                </div>
-                <div class="subforum-description subforum-column">
-                    <h4><a href="#">Description Title</a></h4>
-                    <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
-                </div>
-                <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
-                </div>
-                <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
-                    <br>on <small>12 Dec 2020</small>
-                </div>
-            </div>
-            <hr class="subforum-devider">
-            <div class="subforum-row">
-                <div class="subforum-icon subforum-column center">
-                    <i class="fa fa-car center"></i>
-                </div>
-                <div class="subforum-description subforum-column">
-                    <h4><a href="#">Description Title</a></h4>
-                    <p>Description Content: let's try to be cool, otherwise,w at 'sthe point in libing together with people youdont' live.</p>
-                </div>
-                <div class="subforum-stats subforum-column center">
-                    <span>24 Posts | 12 Topics</span>
-                </div>
-                <div class="subforum-info subforum-column">
-                    <b><a href="">Last post</a></b> by <a href="">JustAUser</a> 
-                    <br>on <small>12 Dec 2020</small>
-                </div>
-            </div>
-
-           
-        </div>
-    </div>
-
-    <div class="forum-info">
-        <div class="chart">
-            MyForum - Stats &nbsp;<i class="fa fa-bar-chart"></i>
-        </div>
-        <span><u>5,369</u> Posts in <u>48</u> Topics by <u>8,124</u> Members.</span><br>
-        <span>Latest post: <b><a href="">Random post</a></b> on Dec 15 2021 By <a href="">RandomUser</a></span>.<br>
-        <span>Check <a href="">the latest posts</a> .</span><br>
-    </div>
-
-    <footer>
-        <span>&copy;  Selmi Abderrahim | All Rights Reserved</span>
-    </footer>
-    <script src="main.js"></script>-->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="{{ url_for('static', filename='script/jquery.js') }}"></script>
     <script src="{{ url_for('static', filename='script/jquery.easing.1.3.js') }}"></script>

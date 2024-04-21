@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition & Diet</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/fancybox/jquery.fancybox.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/jcarousel.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/flexslider.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='script/owl-carousel/owl.carousel.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Top bar navigation -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo"/></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/">Home</a></li> 
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section>
+            <!-- Header background and title -->
+            <div class="header-background" style="color:#7ed2c3">
+                <div class="container">
+                    <h1>Nutrition & Diet</h1>
+                    <p>Discussions about healthy eating habits, diet plans, meal ideas, and nutrition tips.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main content -->
+        <section class="posts">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Post Title</th>
+                        <th><i class="fa fa-comments"></i></th>
+                        <th><i class="fa fa-thumbs-up"></i></th>
+                        <th><i class="fa fa-eye"></i></th>
+                        <th>Recent Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="post.html">10 Healthy Meal Prep Ideas for Busy Weekdays</a></td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>10</td>
+                        <td>1 hour ago</td>
+                    </tr>
+                    <tr>
+                        <td><a href="post.html">The Role of Macronutrients in a Balanced Diet: Understanding Proteins, Carbs, and Fats</a></td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>3 Months Ago</td>
+                    </tr>
+                    <tr>
+                        <td><a href="post.html">5 Superfoods to Boost Your Immune System and Overall Health</a></td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>10</td>
+                        <td>A week ago</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
