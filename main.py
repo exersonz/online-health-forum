@@ -24,5 +24,9 @@ def create_post():
     # For now, let's just redirect back to the category page
     return redirect(url_for('load_category'))
 
+@app.route('/about.html')
+def load_about():
+    return render_template('about.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
