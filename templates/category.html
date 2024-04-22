@@ -38,7 +38,7 @@
         
         <section>
             <!-- Header background and title -->
-            <div class="header-background" style="color:#7ed2c3">
+            <div class="header-background" style="background-color:#64d1bd;">
                 <div class="container">
                     <h1>Nutrition & Diet</h1>
                     <p>Discussions about healthy eating habits, diet plans, meal ideas, and nutrition tips.</p>
@@ -83,6 +83,43 @@
                 </tbody>
             </table>
         </section>
+
+        <div class="text-right">
+            <a href="create_post.html" class="btn btn-primary" id="createPostBtn">Create Post</a>
+        </div>
     </div>
+
+     <!-- JavaScript -->
+     <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var createPostBtn = document.getElementById("createPostBtn");
+                createPostBtn.addEventListener("click", function() {
+                // Retrieve input values
+                var titleInput = document.getElementById("title");
+                var contentInput = document.getElementById("content");
+                
+                // Get the input values
+                var title = titleInput.value;
+                var content = contentInput.value;
+
+                // Create a new row
+                var newRow = document.createElement("tr");
+                newRow.innerHTML = `
+                    <td><a href="post.html">${title}</a></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>Just Now</td>
+                `;
+                // Append the new row to the table body
+                var tbody = document.querySelector("#postTable tbody");
+                tbody.appendChild(newRow);
+                
+                // Clear input fields
+                titleInput.value = "";
+                contentInput.value = "";
+            });
+        });
+    </script>
 </body>
 </html>

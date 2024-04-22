@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition & Diet - Post</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/fancybox/jquery.fancybox.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/jcarousel.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/flexslider.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='script/owl-carousel/owl.carousel.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @import url('http://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700'); 
+        body {
+            font-family:'Open Sans', Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .navbar-nav li {
+            margin-right: 15px;
+        }
+
+        .blog-post {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .blog-post p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .blog-post p:first-child {
+            margin-top: 0;
+        }
+
+        .blog-post p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Top bar navigation -->
+        <header>
+            <div class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo"/></a>
+                    </div>
+                    <div class="navbar-collapse collapse ">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/">Home</a></li> 
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="post-content">
+            <div class="container">
+                <h1>10 Healthy Meal Prep Ideas for Busy Weekdays</h1>
+                <p>Ada Lovelace | 4/21/2024</p>
+                <p>1. Overnight Oats: Quick and customizable breakfast option.<br>
+                    2. Mason Jar Salads: Portable and fresh lunch solution.<br>
+                    3. Quinoa Power Bowls: Nutritious and versatile lunch option.<br>
+                    4. Stir-Fry Freezer Packs: Easy and quick dinner idea.<br>
+                    5. Egg Muffins: Protein-packed grab-and-go breakfast.<br>
+                    6. Roasted Vegetable Medley: Simple and flavorful side dish.<br>
+                    7. Bean and Grain Salads: Filling and wholesome lunch choice.<br>
+                    8. Homemade Soup: Convenient and comforting meal option.<br>
+                    9. DIY Trail Mix: Healthy and satisfying snack idea.<br>
+                    10. Greek Yogurt Parfaits: Easy and delicious breakfast or snack.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
